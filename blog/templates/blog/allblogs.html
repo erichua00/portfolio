@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -28,19 +29,19 @@
 
 
   <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
     }
+  }
   </style>
 
 
@@ -56,9 +57,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <div class="navbar-nav ml-auto">
-              <a class="nav-item nav-link" href="https://facebook.com">Facebook</a>
-              <a class="nav-item nav-link" href="{%static 'Industrial Training Briefing_v9 -Year 2021.pdf'%}">Resume</a>
-              <a class="nav-item nav-link" href="{%url 'allblogs'%}">Blog</a>
+            <a class="nav-item nav-link" href="https://facebook.com">Facebook</a>
+            <a class="nav-item nav-link" href="{%static 'Industrial Training Briefing_v9 -Year 2021.pdf'%}">Resume</a>
+            <a class="nav-item nav-link active" href="{%url 'allblogs'%}">Blog</a>
           </div>
         </div>
       </div>
@@ -66,42 +67,24 @@
   </header>
 
   <main>
+    <div class="container">
+      <h1 class="text-center pt-5">Welcome to My Blog</h1>
+      <br>
+      <h2 class="text-center pt-5">Latest Post</h2>
+      <hr>
 
-    <section class="py-5 text-center container">
-      <div class="row py-lg-5">
-        <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-light">Hi</h1>
-          <p class="lead text-muted">Good Day, Mate!</p>
-          <p>
-            <a href="https://gmail.com mailto:ericcyh130259@gmail.com" class="btn btn-primary my-2">Contact Me</a>
-          </p>
-          <img src="{%static 'IT.jpg'%}" alt="", height=540 ,width=960>
-        </div>
-      </div>
-    </section>
+      {% for blog in blogs.all%}
+      <a href="{%url 'detail' blog.id%} "><h3>{{blog.title}}</h3> </a>
+      <br>
+      <p>{{blog.summary}}</p>
+      <br>
+      <img class="img-fluid" src="{{blog.image.url}}" alt="" height=540 width=960>
+      <br>
+      {{blog.pubdatepretty}}
+      <br>
+      <br>
+      {%endfor%}
 
-    <div class="album py-5 bg-light">
-      <div class="container">
-
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
-          {%for job in jobs.all%}
-          <div class="col">
-
-            <div class="card shadow-sm">
-              <img class="card-img-top" src="{{job.image.url}}">
-
-              <div class="card-body">
-                <p class="card-text">{{job.summary}}</p>
-              </div>
-
-            </div>
-
-          </div>
-
-          {%endfor%}
-        </div>
-      </div>
     </div>
   </main>
 
