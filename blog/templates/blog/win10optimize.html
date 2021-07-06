@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,8 +12,7 @@
 
   <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
 
-  <!-- google ads -->
-  <script data-ad-client="ca-pub-5796506592913471" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 
   <!-- Bootstrap core CSS -->
   <!-- CSS only -->
@@ -27,6 +27,7 @@
   <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
   <meta name="theme-color" content="#7952b3">
 
+
   <style>
   .bd-placeholder-img {
     font-size: 1.125rem;
@@ -40,12 +41,6 @@
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
     }
-  }
-  .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
   }
   </style>
 
@@ -64,7 +59,7 @@
           <div class="navbar-nav ml-auto">
             <!-- <a class="nav-item nav-link" href="https://facebook.com">Facebook</a> -->
             <!-- <a class="nav-item nav-link" href="{%static 'lock screen.jpg'%}">Resume</a> -->
-            <!-- <a class="nav-item nav-link" href="{%url 'allblogs'%}">Blog</a> -->
+            <!-- <a class="nav-item nav-link active" href="{%url 'allblogs'%}">Blog</a> -->
           </div>
         </div>
       </div>
@@ -72,43 +67,36 @@
   </header>
 
   <main>
-
-    <section class="py-5 text-center container">
-        <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-light">Hi there, I'm Eric.</h1>
-          <br>
-          <p class="lead text-muted" style="font-size:150%;">I'm currently building a website to post article(s) related to Windows 10 performance optimizations.</p>
-          <a href="{%url 'win10optimize'%}" class="btn btn-primary my-2">Click Here to Check Them Out!</a>
-          <br>
-          <hr>
-            <!--<a href="" class="btn btn-primary my-2">Contact Me</a>-->
-          <!-- <img src="{%static 'background.jpg'%}" alt="" class="center"> -->
-        </div>
-    </section>
-
-    <!-- <div class="album py-5 bg-light">
+    <div class="container">
+      <h1 class="text-center pt-5">Windows 10 Performance Optimization</h1>
+      <h3 class="text-center pt-3">(Especially for Laptops with Nvidia Graphic Card)</h3>
+      <br>
+      <hr>
+      <p>Just follow steps below to get a smooth PC. Let's start!
+      </p>
       <div class="container">
-
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
-          {%for job in jobs.all%}
-          <div class="col">
-
-            <div class="card shadow-sm">
-              <img class="card-img-top" src="{{job.image.url}}">
-
-              <div class="card-body">
-                <p class="card-text">{{job.summary}}</p>
-              </div>
-
-            </div>
-
-          </div>
-
-          {%endfor%}
-        </div>
+        <a href="{%url 'step_1'%}"><h2 class="pt-5">1. Update Your Drivers and Windows</h2></a>
       </div>
-    </div> -->
+      <!-- <div class="container">
+        <a href="{%url 'step_1'%}"><h2 class="pt-5">2. Optimize Graphic Settings</h2></a>
+      </div>
+      <div class="container">
+        <a href="{%url 'step_1'%}"><h2 class="pt-5">3. Optimize Windows Settings</h2></a>
+      </div>
+      <div class="container">
+        <a href="{%url 'step_1'%}"><h2 class="pt-5">4. Optimize Your Network Settings</h2></a>
+      </div>
+      <div class="container">
+        <a href="{%url 'step_1'%}"><h2 class="pt-5">5. Clean Up and Defrag</h2></a>
+      </div> -->
+      <br>
+      <hr>
+      <br>
+      <div class="text-center">
+        <a href="{%url 'home'%}" class="btn btn-primary btn-lg my-2">Back</a>
+      </div>
+    </div>
+
   </main>
 
   <footer class="text-muted py-5">
