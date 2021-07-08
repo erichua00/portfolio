@@ -72,9 +72,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <div class="navbar-nav ml-auto">
-            <!-- <a class="nav-item nav-link" href="https://facebook.com">Facebook</a> -->
-            <!-- <a class="nav-item nav-link" href="{%static 'lock screen.jpg'%}">Resume</a> -->
-            <!-- <a class="nav-item nav-link" href="">Blog</a> -->
+            <a class="nav-item nav-link" href="https://facebook.com">Facebook</a>
+            <!--<a class="nav-item nav-link" href="{%static 'lock screen.jpg'%}">Resume</a>-->
+            <a class="nav-item nav-link" href="{%url 'blogs'%}">Blog</a>
           </div>
         </div>
       </div>
@@ -86,17 +86,17 @@
     <section class="py-5 text-center container">
         <div class="col-lg-6 col-md-8 mx-auto">
           <h1 class="fw-light">Hi there, I'm Eric.</h1>
+          <!--<p class="lead text-muted" style="font-size:150%;">I'm currently building a website to post article(s) related to Windows 10 performance optimizations.</p>
+          <a href="" class="btn btn-primary my-2">Click Here to Check Them Out!</a>
           <br>
-          <p class="lead text-muted" style="font-size:150%;">I'm currently building a website to post article(s) related to Windows 10 performance optimizations.</p>
-          <a href="{%url 'win10optimize'%}" class="btn btn-primary my-2">Click Here to Check Them Out!</a>
-          <br>
-          <hr>
+          <hr>-->
             <!--<a href="" class="btn btn-primary my-2">Contact Me</a>-->
           <!-- <img src="{%static 'background.jpg'%}" alt="" class="center"> -->
+
         </div>
     </section>
 
-    <!-- <div class="album py-5 bg-light">
+    <div class="album py-5 bg-light">
       <div class="container">
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -118,7 +118,11 @@
           {%endfor%}
         </div>
       </div>
-    </div> -->
+    </div>
+
+    <div class="container">
+      <hr>
+    </div>
   </main>
 
   <footer class="text-muted py-5">

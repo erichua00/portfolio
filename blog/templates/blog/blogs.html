@@ -59,7 +59,7 @@
           <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link" href="https://facebook.com">Facebook</a>
             <!-- <a class="nav-item nav-link" href="{%static 'lock screen.jpg'%}">Resume</a> -->
-            <a class="nav-item nav-link active" href="{%url 'allblogs'%}">Blog</a>
+            <a class="nav-item nav-link active" href="{%url 'blogs'%}">Blog</a>
           </div>
         </div>
       </div>
@@ -69,7 +69,6 @@
   <main>
     <div class="container">
       <h1 class="text-center pt-5">Welcome to My Blog!</h1>
-      <br>
       <h2 class="text-center pt-5">Latest Post</h2>
       <hr>
 
@@ -84,7 +83,11 @@
       <br>
       <br>
       {%endfor%}
-
+      <hr>
+      <br>
+      <div class="text-center">
+        <a href="{%url 'home'%}" class="btn btn-primary btn-lg my-2">Back</a>
+      </div>
     </div>
   </main>
 
